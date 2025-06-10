@@ -2,6 +2,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Head from "next/head";
 
 interface Post {
   id: number;
@@ -42,6 +43,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 export default function PostPage({ post }: PostPageProps) {
   return (
     <>
+      <Head>
+        <title>Blog Details</title>
+        <meta name="description" content="Blog Details with static export" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Navbar />
       <div className="wrapper">
         <article>

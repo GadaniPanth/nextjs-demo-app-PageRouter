@@ -3,6 +3,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import styles from "@/styles/product.module.css";
 import ProductSlider from "@/components/ProductSlider";
 import Navbar from "@/components/Navbar";
+import Head from "next/head";
 
 type Product = {
   id: number;
@@ -65,6 +66,12 @@ export default function ProductPage({ product }: ProductPageProps) {
 
   return (
     <>
+     <Head>
+        <title>Product Details</title>
+        <meta name="description" content="Product Details with static export" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Navbar />
       <div className={styles.products_wrapper}>
         <ProductSlider images={product.images} title={product.title} />

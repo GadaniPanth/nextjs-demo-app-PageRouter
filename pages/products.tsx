@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import styles from "@/styles/products.module.css";
 import ProductFilter from "@/components/ProductFilter";
@@ -58,6 +59,12 @@ export default function ProductsPage({ categories, products }: Props) {
 
   return (
     <>
+      <Head>
+        <title>Products List</title>
+        <meta name="description" content="Products List with static export" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Navbar />
       <div className={styles.products_wrapper}>
         <ProductFilter categories={categories} />
