@@ -14,7 +14,7 @@ interface PostPageProps {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch("https://dummyjson.com/posts");
+  const res = await fetch("https://dummyjson.com/posts?limit=250");
   const data = await res.json();
 
   const paths = data.posts.map((post: Post) => ({
@@ -23,7 +23,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false, // or 'blocking' if you want dynamic fallback (not for output: export)
+    fallback: false,
   };
 };
 
