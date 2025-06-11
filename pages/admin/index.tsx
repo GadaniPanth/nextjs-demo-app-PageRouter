@@ -19,8 +19,8 @@ export async function getStaticProps() {
 }
 
 export default function Home() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  //   const [email, setEmail] = useState("");
+  //   const [password, setPassword] = useState("");
 
   //   async function Submit() {
   //     // console.log(email);
@@ -54,7 +54,7 @@ export default function Home() {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
 
-    console.log(formData);
+    // console.log(formData);
 
     for (const [key, value] of formData.entries()) {
       console.log(key, value);
@@ -87,16 +87,16 @@ export default function Home() {
           <input
             type="email"
             placeholder="Enter Your Email"
-            value={email}
+            // value={email}
             name="email"
-            onChange={(e) => setEmail(e.target.value)}
+            // onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="password"
             placeholder="Enter Your Password"
-            value={password}
+            // value={password}
             name="password"
-            onChange={(e) => setPassword(e.target.value)}
+            // onChange={(e) => setPassword(e.target.value)}
           />
 
           <input type="submit" />
