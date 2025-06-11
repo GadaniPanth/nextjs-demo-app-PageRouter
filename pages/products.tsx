@@ -40,7 +40,7 @@ export default function ProductsPage({ categories, products }: Props) {
   const search = (router.query.search as string) || "";
 
   const filteredProducts = useMemo(() => {
-    let filtered = [...products]; // copy the original array
+    let filtered = [...products];
 
     if (search) {
       filtered = filtered.filter((product) =>

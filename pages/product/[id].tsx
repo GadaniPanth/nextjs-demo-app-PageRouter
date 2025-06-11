@@ -66,7 +66,7 @@ export default function ProductPage({ product }: ProductPageProps) {
 
   return (
     <>
-     <Head>
+      <Head>
         <title>Product Details</title>
         <meta name="description" content="Product Details with static export" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
